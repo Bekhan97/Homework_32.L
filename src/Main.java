@@ -1,7 +1,6 @@
-import model.Product;
+import model.*;
 import service.ProductsService;
 
-import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
@@ -43,7 +42,7 @@ public class Main {
         }
 
 
-        List<Product> sortedProductList = productsService.getSortedProductList(new ComparatorProductByName());
+        List<Product> sortedProductList = productsService.getSortedProductList(comparator);
         System.out.println(sortedProductList);
 
     }
